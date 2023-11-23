@@ -21,4 +21,4 @@ jobs:
     with:
       text: ${{ inputs.text }}
       environment: ${{ inputs.tgt_env }}
-    secrets: ${{ secrets.PHONE_NUMBER }}
+    secrets: inherit
