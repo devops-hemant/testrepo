@@ -4,4 +4,4 @@ on:
 
 jobs:
   build:
-    uses: devop-hemant/pipelines_server/.github/workflows/hello.yml@main
+    uses: devops-hemant/pipelines_server/.github/workflows/hello.yml@main
