@@ -1,0 +1,7 @@
+name: Main Workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: pipelines_server/.github/workflows/hello.yml
