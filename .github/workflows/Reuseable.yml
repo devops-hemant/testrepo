@@ -16,9 +16,9 @@ on:
         
 
 jobs:
-  build:
+  Teasting_Reuseable_Workflow:
     uses: devops-hemant/pipelines_server/.github/workflows/hello.yml@main
     with:
       text: ${{ inputs.text }}
-      tgt_env: ${{ inputs.tgt_env }}
+      environment: ${{ inputs.tgt_env }}
         
