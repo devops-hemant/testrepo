@@ -8,7 +8,7 @@ on:
         required: true
       tgt_env:
         description: "choose the tagert environment"
-        type: choise
+        type: choice
         options:
         - dev_01
         - dev_02
