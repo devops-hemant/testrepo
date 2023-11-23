@@ -4,4 +4,4 @@ on:
 
 jobs:
   build:
-    uses: pipelines_server/.github/workflows/hello.yml
+    uses: pipelines_server/.github/workflows/hello.yml@main
