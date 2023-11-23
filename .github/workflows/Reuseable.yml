@@ -20,5 +20,5 @@ jobs:
     uses: devops-hemant/pipelines_server/.github/workflows/hello.yml@main
     with:
       text: ${{ inputs.text }}
-      environment: ${{ inputs.tgt_env }}
+      tgt_env: ${{ inputs.tgt_env }}
         
