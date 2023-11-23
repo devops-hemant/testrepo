@@ -1,7 +1,14 @@
 name: Reuseable Workflow
 on: 
   workflow_dispatch:
+    inputs:
+      text:
+        description: "please enter  text to print"
+        type: string
+        required: true
 
 jobs:
   build:
     uses: devops-hemant/pipelines_server/.github/workflows/hello.yml@main
+    with:
+      text: ${{ inputs.text }}
