@@ -6,6 +6,14 @@ on:
         description: "please enter  text to print"
         type: string
         required: true
+      tgt_env:
+        description: "choose the tagert environment"
+        type: choise
+        options:
+        - dev_01
+        - dev_02
+        - dev_03
+        
 
 jobs:
   build:
