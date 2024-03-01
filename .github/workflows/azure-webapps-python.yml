@@ -27,7 +27,7 @@ jobs:
           black .
 
       - name: Git push
-        if: github.event_name != 'pull_request'
+        #if: github.event_name != 'pull_request'
         run: |
           git branch --show-current
           git config user.name github-actions
