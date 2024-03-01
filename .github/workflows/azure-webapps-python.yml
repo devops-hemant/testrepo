@@ -32,5 +32,4 @@ jobs:
           set -x
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git commit -am "black reformtting"
-          git push --force origin HEAD:${{ github.head_ref }}
+          git pull
