@@ -25,3 +25,9 @@ jobs:
       - name: Run black
         run: |
           black .
+
+      - name: Git push
+        run: | 
+          git add .
+          git commit -m "black reformtting"
+          git push
