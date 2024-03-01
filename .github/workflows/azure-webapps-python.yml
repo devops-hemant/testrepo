@@ -25,10 +25,9 @@ jobs:
       - name: Run Black & Git push
         #if: github.event_name != 'pull_request'
         run: |
+          set -x
           black .
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git pull ${{ github.server_url }}/${{ github.repository }}
-          git add .
-          git commit -m "Black Reformat"
-          git push origin HEAD:${{ github.head_ref }}
+          git commit -am "black reformtting"
+          git push --force origin HEAD:${{ github.head_ref }}
