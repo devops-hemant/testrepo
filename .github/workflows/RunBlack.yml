@@ -25,13 +25,14 @@ jobs:
       - name: Install black
         run: |
           pip install black
-          
 
-      - name: Run Black & Git push
+      - name: Run Black
+        run: | 
+          black .
+
+      - name: Git push
         #if: github.event_name != 'pull_request'
         run: |
-          set -x
-          black .
           git config user.name github-actions
           git config user.email github-actions@github.com
           git commit -am "black reformtting"
