@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Set up Python version
         uses: actions/setup-python@v5
@@ -30,4 +32,4 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git commit -am "black reformtting"
-          git push --force origin HEAD:${{ github.head_ref }}
+          git push
