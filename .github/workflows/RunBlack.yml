@@ -23,6 +23,7 @@ jobs:
       - name: Install black
         run: |
           pip install black
+          
 
       - name: Run Black & Git push
         #if: github.event_name != 'pull_request'
