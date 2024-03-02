@@ -17,7 +17,7 @@ def login():
     # If the query returns any matching record, consider the current user logged in.
     record = cursor.fetchone()
     if record:
-           session["logged_user"] = username
+        session["logged_user"] = username
 
     # disconnect from server
     db.close()
