@@ -41,6 +41,8 @@ jobs:
           echo "datatype without space = $datatype_no_space"
           echo "datatype without space = $datatype_no_space" >> $GITHUB_STEP_SUMMARY
           
-          sed -i "s/<columnname>.*<comment>/<$datatype_no_space>/g" test.txt
+          #sed -i "s/columnname.*comment/columnname $datatype_no_space /g" test.txt
+
+          awk '/columnname/,/comment/{printf "%s $datatype_no_space %s\n", $0}'
 
           cat test.txt
