@@ -30,7 +30,7 @@ jobs:
             }
           
           comment() {
-            grep -oP '(?<=comment).*' test.txt
+            grep -oP (?<=comment).* test.txt
           }
           
           comment_text=$(comment)
