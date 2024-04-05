@@ -1,1 +1,1 @@
-columnname array > struts > text > new text > >> comment 'I am a comment'
+columnname array > struts > text > new text > >> comment 'I am a comment',
