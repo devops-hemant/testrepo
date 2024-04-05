@@ -34,3 +34,8 @@ jobs:
           echo "after removing spaces"
 
           echo $datatype | sed 's/ //g'
+
+          datatype_no_space=$(echo $datatype | sed 's/ //g')
+
+          echo "datatype without space = $datatype_no_space"
+          echo "datatype without space = $datatype_no_space" >> $GITHUB_STEP_SUMMARY
