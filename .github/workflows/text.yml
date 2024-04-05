@@ -26,7 +26,7 @@ jobs:
         run: |
           set -x
           data_type() {
-            grep -oP '(?<=columnname).*?(?=comment)' test.txt
+            grep -oP "(?<=columnname).*?(?=comment)" test.txt
             }
           
           comment() {
@@ -47,6 +47,6 @@ jobs:
           echo "datatype without space = $datatype_no_space"
           echo "datatype without space = $datatype_no_space" >> $GITHUB_STEP_SUMMARY
           
-          sed -i "s/columnname.*comment/columnname $datatype_no_space $comment_text/g" test.txt
+          sed -i "s/columnname.*comment/columnname $datatype_no_space comment $comment_text/g" test.txt
 
           cat test.txt
