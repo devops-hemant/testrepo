@@ -29,4 +29,8 @@ jobs:
             }
           
           datatype=$(data_type)
-          echo $datatype
+          echo "expected type is = $datatype"
+
+          echo "after removing spaces"
+
+          echo $datatype | sed 's/ //g'
