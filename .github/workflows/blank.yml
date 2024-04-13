@@ -32,8 +32,18 @@ jobs:
             grep 'using delta' myfile.sql | grep -oP "(?<=PARTITIONED).*?(?=COMMENT)"
           }
 
+          struct() {
+            grep -i -w 'STRUCT' myfile.sql
+          }
+
           if partitioned; then
             echo "partitioned"
           else
             echo "not partitioned"
+          fi
+
+          if struct; then
+            echo "struct"
+          else
+            echo "not struct"
           fi
