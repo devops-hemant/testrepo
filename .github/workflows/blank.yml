@@ -36,13 +36,15 @@ jobs:
             grep -i -w 'STRUCT' myfile.sql
           }
 
-          if partitioned; then
+          if [ partitioned ]
+          then
             echo "partitioned"
           else
             echo "not partitioned"
           fi
 
-          if struct; then
+          if [ struct ] 
+          then
             echo "struct"
           else
             echo "not struct"
