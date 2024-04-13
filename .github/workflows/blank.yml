@@ -32,8 +32,6 @@ jobs:
             grep 'using delta' myfile.sql | grep -oP "(?<=PARTITIONED).*?(?=COMMENT)"
           }
 
-          partitioned
-
           if partitioned; then
             echo "partitioned"
           else
